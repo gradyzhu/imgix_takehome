@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="author" content="">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="../css/reset.css" rel="stylesheet">
+  <link href="../css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="app">
+    <div class="image-wrap">
+      <h1 id="image-text"></h1>
+      <div id="img-container">
+        <img id="image">
+      </div>
+    </div>
+    <div class="controls-wrap">
+      <div id="controls">
+        <p>Image Text</p>
+        <form id="text-form">
+          <input type="text" id="text-input" placeholder="image text">
+          <button>Submit</button>
+        </form>
+        <div class="hexcode-title">
+          <p>Blend Hexcode</p>
+          <p id="hex-error">Invalid Hexcode</p>
+        </div>
+        <form id="hex-form">
+          <input type="text" id="hex-input" placeholder="ex. #808080" value="#">
+          <button>Submit</button>
+        </form>
+        <p>Blend Mode</p>
+        <select id="blend-mode">
+          <option selected>None</option>
+          <option>Overlay</option>
+          <option>Multiply</option>
+          <option>Darken</option>
+          <option>Soft-Light</option>
+          <option>Hard-Light</option>
+        </select>
+        <div id="text-opacity-title">
+          <p>Text Opacity</p>
+        </div>
+        <div class="slider-range">
+          <p>0</p>
+          <p>100</p>
+        </div>
+        <input type="range" id="text-opacity">
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
