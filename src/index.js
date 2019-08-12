@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import { 
-  handleTextInput, handleHexInput, handleTextSubmit, 
-  handleHexSubmit, textInput, textForm, hexForm, hexInput,
+  handleTextInput, handleHexInput, 
+  handleHexSubmit, textInput, hexForm, hexInput,
   blendOptions, handleOptions, handleTextOpacity, textOpacitySlider
 } from './handlers.js';
 
