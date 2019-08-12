@@ -1,0 +1,113 @@
+
+body, #text-form, #hex-form, .controls-wrap, .slider-range, .app, .hexcode-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app, body, #controls {
+  flex-direction: column;
+}
+
+#blend-options-header, .hexcode-title, #controls  {
+  justify-content: flex-start;
+}
+
+.slider-range {
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.slider-range p {
+  color: rgb(65, 108, 235);
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(232, 232, 232);
+  font-family: helvetica;
+}
+
+p {
+  font-size: 14px;
+}
+
+input, select, button {
+  width: 100%;
+  margin: 15px 0px;
+  border: none;
+  border-radius: 3px;
+  font-size: 14px;
+  height: 30px;
+}
+
+input[type=text] {
+  height: 30px;
+  padding: 0px 10px;
+  margin-right: 10px;
+}
+
+input[type=range] {
+  margin: 0px;
+}
+
+button {
+  transition: .3s;
+  width: 150px;
+  background-color: rgb(65, 108, 235);
+  color: white;
+}
+
+button:hover {
+  background-color: rgb(73, 113, 233);
+}
+
+button:active {
+  background-color: rgb(52, 97, 232);
+  transform: scale(.9)
+}
+
+#hex-error {
+  margin-left: 10px;
+  color: red;
+  opacity: 0;
+}
+
+.image-wrap {
+  position: relative;
+  max-width: 50vw;
+}
+
+#text-form, #hex-form {
+  width: 50vw;
+}
+
+.img-container {
+  max-width: 500px;
+}
+#image {
+  width: 100%;
+  border-radius: 5px;
+}
+
+#controls {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 50vw;
+}
+
+#image-text {
+  z-index: 1;
+  position: absolute;
+  font-size: 3vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.controls-wrap {
+  width: 80vw;
+}
+
