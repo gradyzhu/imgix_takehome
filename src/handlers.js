@@ -9,16 +9,16 @@ export const image = document.getElementById('image');
 export const blendOptions = document.getElementById('blend-mode');
 export const blendOptionsHeader = document.getElementById('blend-options-header');
 export const hexError = document.getElementById('hex-error');
-export const imageText = document.getElementById('image-text');
 export const textOpacitySlider = document.getElementById('text-opacity');
 
-const HEXCHARS = /^#[0-9A-F]{6}$/;
+const HEXCHARS = /^#[0-9A-Fa-f]{6}$/;
 let textValue = "default text";
 let hexValue = "#";
 
 // set default values
 
 image.src = "https://assets.imgix.net/unsplash/bridge.jpg";
+image.style.mixBlendMode = "overlay";
 textInput.value = "default text";
 text.innerHTML = textValue;
 textOpacitySlider.value = 100;
@@ -55,18 +55,13 @@ export const handleOptions = (e) => {
 // handle text
 
 export const handleTextInput = (e) => {
-  textValue = e.currentTarget.value;
-};
-
-export const handleTextSubmit = (e) => {
   e.preventDefault();
-  text.innerHTML = textValue;
-  textInput.value = "";
+  text.innerHTML = e.currentTarget.value;
 };
 
 export const handleTextOpacity = (e) => {
   let value = e.currentTarget.value ;
-  imageText.style.opacity = Number(value) * (0.01);
+  text.style.opacity = Number(value) * (0.01);
 };
 
 // handle hex
@@ -101,9 +96,7 @@ export const handleHexSubmit = (e) => {
   e.preventDefault();
   if (isValidHex(hexValue)) {
     container.style.backgroundColor = hexValue;
-    hexValue = "#";
   } else {
-    hexValue = "#";
     renderHexError();
   }
 };

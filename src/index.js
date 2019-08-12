@@ -6,9 +6,8 @@ import {
 } from './handlers.js';
 
 document.addEventListener("DOMContentLoaded", () => {
-  textForm.addEventListener('submit', handleTextSubmit);
   hexForm.addEventListener('submit', handleHexSubmit);
-  textInput.addEventListener('change', handleTextInput);
+  textInput.addEventListener('input', handleTextInput);
   hexInput.addEventListener('change', handleHexInput);
   blendOptions.addEventListener('change', handleOptions);
   textOpacitySlider.addEventListener('change', handleTextOpacity);
